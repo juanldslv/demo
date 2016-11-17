@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Web;
 
@@ -11,7 +12,12 @@ namespace WebApplication2.Models
         public democontext():base("DefaultConnection")
         {
 
+            
+        }
 
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
         }
 
         public DbSet<State> States { get; set; }
@@ -20,6 +26,8 @@ namespace WebApplication2.Models
 
         public DbSet<Voting> Votings { get; set; }
 
-        public System.Data.Entity.DbSet<WebApplication2.Models.User> Users { get; set; }
+        public DbSet<User> Users { get; set; }
+
+        public DbSet<GroupMember> GroupMembers { get; set; }
     }
 }

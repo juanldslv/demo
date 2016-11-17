@@ -76,3 +76,17 @@ C:\Users\Juan\Source\Repos\WebApplication2\WebApplication2\obj\Debug\WebApplicat
 C:\Users\Juan\Source\Repos\WebApplication2\WebApplication2\obj\Debug\WebApplication2.Migrations.InitialCreate.resources
 C:\Users\Juan\Source\Repos\WebApplication2\WebApplication2\obj\Debug\WebApplication2.csproj.GenerateResource.Cache
 C:\Users\Juan\Source\Repos\WebApplication2\WebApplication2\obj\Debug\WebApplication2.Migrations._20162510.resources
+C:\Users\Juan\Source\Repos\WebApplication2\WebApplication2\bin\roslyn\csc.exe.config
+C:\Users\Juan\Source\Repos\WebApplication2\WebApplication2\bin\roslyn\csc.rsp
+C:\Users\Juan\Source\Repos\WebApplication2\WebApplication2\bin\roslyn\csi.exe
+C:\Users\Juan\Source\Repos\WebApplication2\WebApplication2\bin\roslyn\csi.rsp
+C:\Users\Juan\Source\Repos\WebApplication2\WebApplication2\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Juan\Source\Repos\WebApplication2\WebApplication2\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Juan\Source\Repos\WebApplication2\WebApplication2\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Juan\Source\Repos\WebApplication2\WebApplication2\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Juan\Source\Repos\WebApplication2\WebApplication2\bin\roslyn\System.AppContext.dll
+C:\Users\Juan\Source\Repos\WebApplication2\WebApplication2\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Juan\Source\Repos\WebApplication2\WebApplication2\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Juan\Source\Repos\WebApplication2\WebApplication2\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Juan\Source\Repos\WebApplication2\WebApplication2\bin\roslyn\vbc.exe.config
+C:\Users\Juan\Source\Repos\WebApplication2\WebApplication2\bin\roslyn\vbc.rsp

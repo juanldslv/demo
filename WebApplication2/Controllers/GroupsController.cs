@@ -14,6 +14,18 @@ namespace WebApplication2.Controllers
     {
         private democontext db = new democontext();
 
+
+        public ActionResult AddMember(int groupId)
+        {
+            ViewBag.UserId = new SelectList(db.Users
+                .OrderBy(u => u.FirstName)
+                .ThenBy(u => u.LastName), "UserId", "FullName");
+            var view = new AddMemberView
+            {
+                GroupId=groupId,
+            };
+            return View(view);
+        }
         // GET: Groups
         public ActionResult Index()
         {
@@ -111,7 +123,25 @@ namespace WebApplication2.Controllers
         {
             Group group = db.Groups.Find(id);
             db.Groups.Remove(group);
-            db.SaveChanges();
+            try
+            {
+                db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                if (ex.InnerException != null && ex.InnerException.InnerException != null &&
+                    ex.InnerException.InnerException.Message.Contains("REFERENCE"))
+                {
+                    ViewBag.Error = " Can´t delete the record, because has related records";
+                }
+                else
+                {
+                    ViewBag.Error = ex.Message;
+                }
+
+                return View(group);
+            }
+            
             return RedirectToAction("Index");
         }
 

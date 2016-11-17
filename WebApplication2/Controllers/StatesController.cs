@@ -100,7 +100,25 @@ namespace WebApplication2.Controllers
                 return HttpNotFound();
             }
             db.States.Remove(state);
-            db.SaveChanges();
+            try
+            {
+                db.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                if (ex.InnerException != null && ex.InnerException.InnerException !=null &&
+                    ex.InnerException.InnerException.Message.Contains("REFERENCE"))
+                {
+                    ViewBag.Error = " Can´t delete the record, because has related records";
+                }
+                else
+                {
+                    ViewBag.Error = ex.Message;
+                }
+
+                return View(state);
+            }
+            
             return RedirectToAction("Index");
 
 

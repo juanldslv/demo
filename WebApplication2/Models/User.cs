@@ -27,6 +27,7 @@ namespace WebApplication2.Models
         public string LastName { get; set; }
         [StringLength(20, ErrorMessage = "The field {0} can contain maximun {1} and minimun {2} characters", MinimumLength = 7)]
         [Required(ErrorMessage = "The Field {0} is required")]
+        public string FullName { get { return string.Format("{0} {1}", this.FirstName, this.LastName); } }
         public string Phone { get; set; }
         [StringLength(100, ErrorMessage = "The field {0} can contain maximun {1} and minimun {2} characters", MinimumLength = 10)]
         [Required(ErrorMessage = "The Field {0} is required")]
@@ -36,5 +37,9 @@ namespace WebApplication2.Models
         [DataType(DataType.ImageUrl)]
         [StringLength(200, ErrorMessage = "The field {0} can contain maximun {1} and minimun {2} characters", MinimumLength = 5)]
         public string Photo { get; set; }
+
+        public virtual ICollection<GroupMember> GroupMembers { get; set; }
+
+        
     }
 }
